@@ -1,7 +1,68 @@
+html{
+    font-size: 10px;
+}
 *{
     margin: 0;
     border: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(236, 236, 236);
+    font-size: inherit;
+}
+
+body *{
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+textarea{
+    width: 100%;
+    height: 60vh; 
+    padding:2rem;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(78, 92, 131);
+    resize: none; 
+}
+.encrypter-container{
+ margin:5% 10%;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width: 45%;
+    padding: 20px;
+    border-radius: 2rem;
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: blue;
+}
+button:active{
+    background-color: green;
+}
+
+.hero{
+    display: none;
+}
+
+@media (min-width:720px) {
+    
+    .hero{
+        display:block;
+    }
+
 }

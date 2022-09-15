@@ -10,25 +10,27 @@
 </head>
 <body>
     <header>
-        <img src="./resources/images/Logo.png" alt="">
+        <img src="./resources/images/Logo.png" alt="Logo Alura">
     </header>
     <main>
         <div class="encrypter-container">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese Texto aqui"></textarea>
+            <textarea id="text-area" placeholder="Ingrese Texto aqui" cols="30" rows="10"></textarea>
             <p class="intrucciones">Solo letras minúsculas y sin acentos</p>
-            <section class="buttons" id="encrypt-button">
-                <button class="button encrypt button">Encriptar</button>
+            <section class="buttons">
+                <button id="encrypt-button" class="button encrypt-button">Encriptar</button>
                 <button class="button decrypt button">Desencriptar</button>
             </section>
     </div>
 
     <section  class="encrypter-results-container">
-        <img src="./resources/images/Muñeco.png" alt="">
-        <div id="encrypter-results" >
-            <h3>Ningún mensaje fue encontrado</h3>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <img class="hero" src="./resources/images/Muñeco.png" alt="Woman looking to a diamond using a magnifier">
+        <div id="encrypter-results" class="encrypter-results" >
+            <section class="results-placeholder-wrapper">
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </section>
         </div>
-      <button class="button copy-button ">Copiar</button>
+      
     </section>
     </main>
 </body>
