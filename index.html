@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador Alura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
@@ -14,18 +17,20 @@
     </header>
     <main>
         <div class="encrypter-container">
-            <textarea pattern="[A-Z\x22]+" id="text-area" placeholder="Ingrese Texto aqui" cols="30" rows="10"></textarea>
-            <p class="intrucciones">Solo letras minúsculas y sin acentos</p>
+            <textarea id="text-area" placeholder="Ingrese Texto aqui" cols="30" rows="10"></textarea>
+            <p class="instructions">Solo letras minúsculas y sin acentos</p>
             <section class="buttons">
                 <button id="encrypt-button" class="button encrypt-button">Encriptar</button>
                 <button class="button decrypt button">Desencriptar</button>
             </section>
     </div>
 
-    <section  id="encrypter-results" class="encrypter-results-container">
+    <section  id="encrypter-results" class="results-container">
             <img class="hero" src="./resources/images/Muñeco.png" alt="Woman looking at a diamond witch a magnifier">    
-            <h3>Ningún mensaje fue encontrado</h3>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>     
+            <div class="message-container">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>     
+            </div>
         </div>
     </section>
     </main>
