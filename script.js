@@ -1,8 +1,10 @@
 // Html elements
 var input = document.getElementById("text-area");
-var outputarea = document.getElementById("encrypter-results");
-var encryptButton = document.getElementById("encrypt-button")
-var decryptButton = document.getElementById("decrypt-button")
+var outputArea = document.getElementById("text-ouput");
+var message = document.getElementById("message");
+var encryptButton = document.getElementById("encrypt-button");
+var decryptButton = document.getElementById("decrypt-button");
+var copyButton = document.getElementById("copy-button");
 
 // Variables to use
 var letters = ["e","i","a","o","u"];
@@ -17,7 +19,10 @@ function clearData(){
     input.value = "";
 }
 function write(){
-    outputarea.innerHTML = "<textarea id = 'text-ouput'>"+textOutput+"</textarea>";
+    outputArea.className = "show";
+    message.className = "hidden";
+    copyButton.className= "show";
+    outputArea.value = textOutput;
 }
 
 
@@ -30,23 +35,33 @@ function replacing(base,change){
 
 
 function encrypt(){
-    pushData();
-    replacing(letters,replaces);
-    write();
-    createButton();
-    clearData();
+    if(input.value != ""){
+        pushData();
+        replacing(letters,replaces);
+        write();
+        clearData();
+    } 
 }
 
 function decrypt(){
-    pushData();
-    replacing(replaces,letters);
-    write();
-    createButton();
-    clearData();
+    if(input.value != ""){
+        pushData();
+        replacing(replaces,letters);
+        write();
+        clearData();
+    }
+}
+
+function copy(){
+    navigator.clipboard.writeText(textOutput);
+    outputArea.value = "";
+    outputArea.className = "hidden";
+    message.className = "show message-container";
+    copyButton.className= "hidden";
 }
 
 encryptButton.onclick = encrypt;
 decryptButton.onclick = decrypt;
-
+copyButton.onclick = copy;
 
 
