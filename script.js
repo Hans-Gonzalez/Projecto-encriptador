@@ -1,6 +1,6 @@
 // Html main elements
 var input = document.getElementById("text-area");
-var outputArea = document.getElementById("text-ouput");
+var outputArea = document.getElementById("text-output");
 var message = document.getElementById("message");
 var encryptButton = document.getElementById("encrypt-button");
 var decryptButton = document.getElementById("decrypt-button");
@@ -19,10 +19,11 @@ function clearData(){
     input.value = "";
 }
 function write(){
+    outputArea.innerHTML = textOutput;
     outputArea.className = "show";
     message.className = "hidden";
     copyButton.className= "show";
-    outputArea.value = textOutput;
+    //outputArea.value = textOutput;
 }
 
 
