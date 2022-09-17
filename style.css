@@ -73,13 +73,18 @@ button{
 }
 
 button:hover{
-    opacity: 0.5;
-    transition: 300ms ease-in-out;
+    background: #a0acd3;
+    border-color: #a0acd3;
+    color: white;
+    transition: all 150ms ease-in-out;
 }
 
 .encrypt-button{
     background: #0A3871;
     color: white;
+}
+.encrypt-button:hover{
+    background-color: #265da0;
 }
 
 .results-container{
