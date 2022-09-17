@@ -1,4 +1,4 @@
-// Html elements
+// Html main elements
 var input = document.getElementById("text-area");
 var outputArea = document.getElementById("text-ouput");
 var message = document.getElementById("message");
