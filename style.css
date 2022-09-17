@@ -50,10 +50,31 @@ textarea{
     outline: none;
 }
 
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 .instructions{
-    font: size 1.2rem;
+    display: flex;
+    width: fit-content;
+    align-content: center;
+    font-size: 1.2rem;
     color: #495057;
 }
+
+.instructions > *{
+    display: inline;
+}
+
+.instructions img{
+    margin-right: 0.5rem;
+    min-width: 2rem;
+}
+
 
 .buttons{
     display: flex;
@@ -98,7 +119,7 @@ button:hover{
     box-shadow: 0px 24px 32px -8px #00000014;
 }
 .message-container{
-    display: flex;
+    /*display: flex;*/
     justify-content: space-around;
     flex-flow: wrap;
     gap: 1.6rem;
@@ -109,9 +130,7 @@ button:hover{
 .message-container p{
     color: #495057;
 }
-.hero{
-    display: none;
-}
+
 
 
 @media (min-width:900px) {

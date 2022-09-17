@@ -18,7 +18,11 @@
     <main>
         <div class="encrypter-container">
             <textarea id="text-area" placeholder="Ingrese Texto aqui" cols="30" rows="10"></textarea>
-            <p class="instructions">Solo letras minúsculas y sin acentos</p>
+            <section class="instructions">
+                <img src="./resources/images/bi_exclamation-circle-fill.png" alt="">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </section>
+           
             <section class="buttons">
                 <button id="encrypt-button" class="button encrypt-button">Encriptar</button>
                 <button id="decrypt-button" class="button decrypt button">Desencriptar</button>
@@ -26,11 +30,13 @@
     </div>
 
     <section  id="encrypter-results" class="results-container">
-            <img class="hero" src="./resources/images/Muñeco.png" alt="Woman looking at a diamond witch a magnifier">    
-            <div class="message-container">
+            <img class="hero hidden" src="./resources/images/Muñeco.png" alt="Woman looking at a diamond witch a magnifier"> 
+            <textarea id = "text-ouput" class="hidden" ></textarea>"   
+            <div id="message" class="message-container">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>     
             </div>
+            <button id="copy-button" class="hidden">Copiar</button>
         </div>
     </section>
     </main>
