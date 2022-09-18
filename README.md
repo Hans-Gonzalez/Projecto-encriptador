@@ -7,12 +7,15 @@ Crear una aplicación que encripta textos.
 
 ### Mi respuesta al desafio.
 
-En esta primera version del encriptador, mi enfoque fue el  completar el desafio con la menor cantidad de conocimiento externo posible, utilizando al maximo los conocimientos impartidos en las clases de Alura One.
+En esta primera version del encriptador, mi enfoque fue el  completar el desafio con la menor cantidad de conocimientos externos posibles, utilizando al maximo los conceptos enseñados en las clases de Alura One.
 Para luego en posteriores versiones  darle mi toque personal.
 
 ### Resultado :
 Para ver el resultado de el desafio , puedes ingresar al siguiente link:
 https://hans-gonzalez.github.io/Projecto-encriptador/
+
+Insignia por proyecto completado <img src = "https://user-images.githubusercontent.com/110706345/190925375-2f375a31-e1f3-4adc-b1e3-8f700ca1f1a8.png" width="100">
+
 
 ## Acerca del desafio
 
@@ -42,4 +45,3 @@ Por ejemplo:
 
 ## Layout
 ![Layout entregado por alura](https://user-images.githubusercontent.com/110706345/190923621-8bed8304-e9ff-4e57-84ce-779d00114900.png)
-
