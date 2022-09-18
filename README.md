@@ -14,7 +14,8 @@ Para luego en posteriores versiones  darle mi toque personal.
 Para ver el resultado de el desafio , puedes ingresar al siguiente link:
 https://hans-gonzalez.github.io/Projecto-encriptador/
 
-Insignia por proyecto completado <img src = "https://user-images.githubusercontent.com/110706345/190925375-2f375a31-e1f3-4adc-b1e3-8f700ca1f1a8.png" width="100">
+#### Insignia por proyecto completado 
+<img src = "https://user-images.githubusercontent.com/110706345/190925375-2f375a31-e1f3-4adc-b1e3-8f700ca1f1a8.png" width="150">
 
 
 ## Acerca del desafio
