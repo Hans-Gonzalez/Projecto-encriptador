@@ -1,3 +1,18 @@
+/* Alll resets . variables , and classes thant defines states*/
+:root{
+
+    --dark-blue:#0A3871;
+    --blue:#265da0;
+    --light-blue:#a0acd3;
+    --tinted-white:#F3F5FC;
+    --grey:#495057;
+    --h1:3rem;
+    --h2:2.8rem;
+    --h3:2.4rem;
+    --p:1.6rem;
+
+}
+
 html{
     font-size: 10px;
 }
@@ -6,137 +21,161 @@ html{
     border: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: inherit;
-    font-family: 'Inter', sans-serif;
-}
-
-body *{
     font-size: 1.6rem;
-}
-
-body{
-
-    background-color: #F3F5FC;
-}
-
-h1{
-    font-size: 2.8rem;
-}
-h2{
-    font-size: 2.4rem;
-}
-h3{
-    font-size: 2rem;
-}
-
-header,main{
-    margin:0 4vw;
-}
-
-header{
-    align-items: flex-start;
-    margin-top: 3vh;
-}
-
-textarea{
-    width: 100%;
-    height: 50vh; 
-    margin: 5.6rem 0 0 0;
-    font-size: 3.2rem;
-    font-weight: bolder;
-    color: #0A3871;
-    background:none;
-    resize: none; 
-    outline: none;
+    font-family: 'Inter', sans-serif;
 }
 
 .hidden{
     display: none;
 }
-
 .show{
     display: block;
 }
+/* All styles*/
 
+body{
+    background: #F3F5FC;
+    /*min-height: 100vh;*/
+}
+
+
+header img{
+    position: absolute;
+    left: 4.27%;
+    top:5%;
+}
+
+main{
+    margin: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+.encrypter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+textarea{
+    margin-top: 15.2rem;
+    max-width: 100%;
+    min-height: 25rem;
+    resize: none;
+    font-size: 2em;
+    outline: none;
+    background: none;
+    color: #0A3871;
+}
 .instructions{
     display: flex;
-    width: fit-content;
-    align-content: center;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+.instructions p{
     font-size: 1.2rem;
-    color: #495057;
 }
-
-.instructions > *{
-    display: inline;
-}
-
 .instructions img{
-    margin-right: 0.5rem;
-    min-width: 2rem;
+    height: 100%;
+    width: auto;
 }
-
-
 .buttons{
-    display: flex;
-    margin: 1.6rem 0 6.4rem 0;
-    gap: 2.4rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6.4rem;
+    
 }
 button{
-    flex: 1;
-    padding: 2.4rem;
-    border: solid #0A3871 0.1rem;
-    border-radius: 2.4rem;
+    width: 100%;
     color: #0A3871;
     background: none;
-    min-width: 30rem;
-}
+    padding: 1.5em 0;
+    border: solid #0A3871 0.1rem;
+    border-radius: 1.5em ;
 
-button:hover{
-    background: #a0acd3;
-    border-color: #a0acd3;
-    color: white;
-    transition: all 150ms ease-in-out;
 }
 
 .encrypt-button{
-    background: #0A3871;
+    background-color: #0A3871;
     color: white;
-}
-.encrypt-button:hover{
-    background-color: #265da0;
 }
 
 .results-container{
-    display: grid;
-    margin:0 0 4rem 0 ;
-    padding: 3.2rem;
-    border-radius: 3.2rem;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
     place-content: center;
-    text-align: center;
-    box-shadow: 0px 24px 32px -8px #00000014;
+    padding:3.2rem;
+    width: 100%;
+    margin: 0 0 4rem 0;
+    background: white;
+    border-radius:2em ;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
-.message-container{
-    /*display: flex;*/
-    justify-content: space-around;
-    flex-flow: wrap;
-    gap: 1.6rem;
-    text-align: center;
-    color: #343A40;
+#text-output{
+    word-wrap: break-word;
+    color: #495057;
+    margin-bottom:2.4rem ;
 }
 
-.message-container p{
-    color: #495057;
+#text-output p{
+    font-size: 2.4rem;
 }
+
+#message {
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+#message h2{
+    font-size: var(--h2);
+    margin-bottom: 1.6rem;
+}
+#hero {
+    margin: auto;*/
+}
+
+
+@media (min-width:500px){
+    main{
+        height: 100vh;
+        margin: 0 4rem;
+    }
+    textarea{
+       margin-top: 24rem ;
+    }
+    .buttons{
+       flex-direction: row;
+    }
+   
 
 
 
 @media (min-width:900px) {
-    
+  
+    main{
+        flex-direction: initial;
+        margin-left: 24rem;
+    }
     .hero{
-        display:none;
+        display:block;
+
+    }
+    .encrypter-container{
+        width: 90%;
+    }
+    .results-container{
+        max-width: 40%;
+        min-width: 40rem;
+        margin-left: 8rem;
+        margin-top: 4rem;
+    }
+    #message{
+        margin-top: 0;
+    }
+
+    .results-container button{
+        
     }
 
 }

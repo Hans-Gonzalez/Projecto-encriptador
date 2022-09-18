@@ -17,7 +17,8 @@
     </header>
     <main>
         <div class="encrypter-container">
-            <textarea id="text-area" placeholder="Ingrese Texto aqui" cols="30" rows="10"></textarea>
+            <textarea id="text-area" class="input-text" placeholder="Ingrese Texto aqui" ></textarea>
+                   
             <div class="all-but-text">
                 <section class="instructions">
                     <img src="./resources/images/bi_exclamation-circle-fill.png" alt="">
@@ -29,15 +30,17 @@
                     <button id="decrypt-button" class="button decrypt button">Desencriptar</button>
                 </section>
             </div>
-    </div>
+        </div>
 
     <section  id="encrypter-results" class="results-container">
-            <img class="hero hidden" src="./resources/images/Muñeco.png" alt="Woman looking at a diamond witch a magnifier"> 
-            <!--<textarea id = "text-ouput" class="hidden" ></textarea>"-->
-            <textarea id="text-output" class="hidden"></textarea>   
+            <img id="hero" class="hero hidden" src="./resources/images/Muñeco.png" alt="Woman looking at a diamond witch a magnifier"> 
             <div id="message" class="message-container">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>     
+            </div>
+            
+            <div class="output-wrapper">
+                <p id="text-output" class="hidden"></p>   
             </div>
             <button id="copy-button" class="hidden">Copiar</button>
         </div>

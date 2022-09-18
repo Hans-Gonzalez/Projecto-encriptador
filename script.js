@@ -1,68 +1,81 @@
 // Html main elements
-var input = document.getElementById("text-area");
+var inputText = document.getElementById("text-area");
 var outputArea = document.getElementById("text-output");
 var message = document.getElementById("message");
+var hero = document.getElementById("hero");
 var encryptButton = document.getElementById("encrypt-button");
 var decryptButton = document.getElementById("decrypt-button");
 var copyButton = document.getElementById("copy-button");
 
+
 // Variables to use
 var letters = ["e","i","a","o","u"];
-var replaces = ["enter","unes","ai","ober","ufat"];
-var textInput;
+var replaces = ["enter","imes","ai","ober","ufat"];
 var textOutput;
 
-function pushData(){
-    textInput = input.value;
+function lowerCase(currentInput){
+    newInput = currentInput.toLowerCase();
+    inputText.value = newInput;
 }
+
 function clearData(){
-    input.value = "";
+   inputText.value = "";
 }
-function write(){
-    outputArea.innerHTML = textOutput;
-    outputArea.className = "show";
-    message.className = "hidden";
-    copyButton.className= "show";
-    //outputArea.value = textOutput;
+
+function onlyLetters(string){
+    //Boolean , checks if all items are letters or an space.//
+    return /^[a-zA-Z ]+$/.test(string);
 }
 
 
-function replacing(base,change){
+function checkInput(){
+    
+    currentInput = inputText.value;
+
+    if (onlyLetters(currentInput)){
+        lowerCase(currentInput);
+    }
+    else{
+        currentInput = currentInput.
+        // Deletes the last character on the input if it isn't an allowed character//
+        substring(0,currentInput.length-1);
+        inputText.value = currentInput;
+    }
+    
+    
+}
+
+function replace(base,change,input){
+    textInput=input.value;
         for (i = 0 ; i < letters.length ; i++){
+
             textInput = textInput.replaceAll(base[i],change[i]);   
         }        
         textOutput=textInput;        
 }
+function write(){
+    outputArea.innerHTML = "<p>"+textOutput+"</p>";
+    outputArea.className = "show";
+    message.className = "hidden";
+    hero.className = "hidden";
+    copyButton.className= "show";
+}
+function encrypt(base,change,input){
 
-
-function encrypt(){
     if(input.value != ""){
-        pushData();
-        replacing(letters,replaces);
+        replace(base,change,input);
         write();
         clearData();
     } 
 }
 
-function decrypt(){
-    if(input.value != ""){
-        pushData();
-        replacing(replaces,letters);
-        write();
-        clearData();
-    }
-}
-
 function copy(){
     navigator.clipboard.writeText(textOutput);
-    outputArea.value = "";
-    outputArea.className = "hidden";
-    message.className = "show message-container";
-    copyButton.className= "hidden";
 }
-
-encryptButton.onclick = encrypt;
-decryptButton.onclick = decrypt;
+inputText.onkeyup = function(){checkInput()};
+encryptButton.onclick = function(){encrypt(letters,replaces,inputText)};
+decryptButton.onclick = function(){encrypt(replaces,letters,inputText)};
 copyButton.onclick = copy;
+
 
 
