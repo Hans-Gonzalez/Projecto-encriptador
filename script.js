@@ -22,27 +22,9 @@ function clearData(){
    inputText.value = "";
 }
 
-function onlyLetters(string){
+function checkInput(input){
     //Boolean , checks if all items are letters or an space.//
-    return /^[a-zA-Z ]+$/.test(string);
-}
-
-
-function checkInput(){
-    
-    currentInput = inputText.value;
-
-    if (onlyLetters(currentInput)){
-        lowerCase(currentInput);
-    }
-    else{
-        currentInput = currentInput.
-        // Deletes the last character on the input if it isn't an allowed character//
-        substring(0,currentInput.length-1);
-        inputText.value = currentInput;
-    }
-    
-    
+    return /^[a-z ]+$/.test(input);
 }
 
 function replace(base,change,input){
@@ -62,17 +44,19 @@ function write(){
 }
 function encrypt(base,change,input){
 
-    if(input.value != ""){
+    if(input.value != "" && checkInput(input)){
         replace(base,change,input);
         write();
         clearData();
     } 
+    else{
+        alert("El texto solo puede contenter letras minusculas")
+    }
 }
 
 function copy(){
     navigator.clipboard.writeText(textOutput);
 }
-inputText.onkeyup = function(){checkInput()};
 encryptButton.onclick = function(){encrypt(letters,replaces,inputText)};
 decryptButton.onclick = function(){encrypt(replaces,letters,inputText)};
 copyButton.onclick = copy;
